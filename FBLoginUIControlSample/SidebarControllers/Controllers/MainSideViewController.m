@@ -33,15 +33,15 @@
     UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
     UIViewController *rearVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
 
-    UINavigationController *frontVC =     [[UIStoryboard storyboardWithName:@"FeedStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"FeedController3"];
+    FeedController3 *frontVC = [[FeedController3 alloc] init];
     
-    UIViewController* frontController = frontVC;
+    //UIViewController* frontController = frontVC;
     //UIViewController* frontController = [[UIViewController alloc] init];
 
-    frontController.view.backgroundColor = [UIColor blackColor];
+    frontVC.view.backgroundColor = [UIColor blackColor];
     
-    UINavigationController *nav = frontVC;
-    //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:frontController];
+    //UINavigationController *nav = frontVC;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:frontVC];
     
     [FlatTheme styleNavigationBarWithFontName:@"Avenir" andColor:[UIColor colorWithWhite:0.4f alpha:1.0f]];
     
@@ -51,7 +51,8 @@
     
     UIBarButtonItem* menuItem = [[UIBarButtonItem alloc] initWithCustomView:menuButton];
 
-    frontController.navigationItem.leftBarButtonItem = menuItem;
+
+    frontVC.navigationItem.leftBarButtonItem = menuItem;
 
     self.contentViewController = nav;
     self.sidebarViewController = rearVC;
