@@ -162,11 +162,10 @@
     
     // Align the button in the center horizontally
     loginView.frame = CGRectOffset(loginView.frame,
-                                   (self.view.center.x - (loginView.frame.size.width / 2)),
-                                   5);
+                                   (self.view.center.x - (loginView.frame.size.width / 2)), 130);
     
-    // Align the button in the center vertically
-    loginView.center = self.view.center;
+
+
     [self.view addSubview:loginView];
 
 }

@@ -33,7 +33,11 @@
     UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
     UIViewController *rearVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
 
-    FeedController3 *frontVC = [[FeedController3 alloc] init];
+    UIStoryboard* feedStoryboard = [UIStoryboard storyboardWithName:@"FeedStoryboard" bundle:nil];
+    UIViewController *frontVC = [feedStoryboard instantiateViewControllerWithIdentifier:@"FeedController3"];
+                                
+    //FeedController3 *frontVC = [[FeedController3 alloc] init];
+
     
     //UIViewController* frontController = frontVC;
     //UIViewController* frontController = [[UIViewController alloc] init];
